@@ -1,0 +1,13 @@
+Queries used to obtain descriptive statistics for a selection of the database categories:
+
+SELECT MIN (rental_duration), MAX(rental_duration), AVG(rental_duration),
+COUNT(rental_duration), COUNT(*)
+FROM film	
+		
+SELECT MIN (length), MAX(length), AVG(length),
+COUNT(length), COUNT(*)
+FROM film
+
+SELECT MIN (rental_rate), MAX(rental_rate), AVG(rental_rate),
+COUNT(rental_rate), COUNT(*)
+FROM film
