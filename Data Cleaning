@@ -1,0 +1,13 @@
+Queries to check for missing and duplicate data
+
+Missing Data Check:
+SELECT COUNT(customer_id), COUNT(store_id), COUNT(first_name), COUNT(last_name),
+COUNT(email), COUNT(address_id), COUNT(activebool),
+COUNT(create_date), COUNT(last_update), COUNT(active)
+FROM cusotmer
+
+Duplicate Value Check:
+SELECT first_name, last_name, COUNT(*)
+FROM customer
+GROUP BY first_name, last_name
+HAVING COUNT (*)>1
