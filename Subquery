@@ -1,3 +1,5 @@
+This is a query showcasing a subquery and joins:
+
 SELECT AVG(total_payments)
 FROM
 (SELECT A.customer_id, A.first_name, A.last_name, D.city, E.country,
@@ -7,5 +9,8 @@ INNER JOIN payment B ON A.customer_id = B.customer_id
 INNER JOIN address C ON A.address_id = C.address_id
 INNER JOIN city D ON C.city_id = D.city_id
 INNER JOIN country E ON D.country_id = E.country_id
-WHERE city IN
-GROUP 
+WHERE city IN ('Aurora', 'Atlixco', 'Xintai', 'Adoni', 'Dhule%',
+'Kurashiki', 'Pingxiang', 'Sivas', 'Celaya', 'So Leopoldo')
+GROUP BY A.customer_id, A.first_name, A.last_name, D.city, E.country
+ORDER BY SUM(B.amount) DESC
+LIMIT 5) AS total_amount_paid
