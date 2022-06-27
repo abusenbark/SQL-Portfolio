@@ -1,3 +1,0 @@
-This is a SQL query showcasing a common table expression:
-
-WITH category_name_cte (film_id.....
