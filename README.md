@@ -11,3 +11,6 @@ The key questions that the presentation sought to answer are:
 >- Which countries are Rockbuster customers based in?
 >- Where are customers with a high lifetime value based?
 >- Do sales figures vary between geographic regions?
+
+## Data Overview
+The data set for this project included information on customers, stores, movies in the catalogue, and rental statistics. A data dictionary with entity relationship diagram is included in the files. 
